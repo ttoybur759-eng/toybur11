@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Toybur Stylish Name Generator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #e9f7ff;      /* Toybur Blue Background */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            background: #0077c2;      /* Toybur Blue */
+            padding: 20px;
+            color: white;
+            font-size: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #0077c2;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 10px auto;
+            width: 85%;
+            border-radius: 10px;
+            font-size: 22px;
+            border: 1px solid #bcdff8;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            margin-top: 25px;
+            background: #0077c2;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        🔥 Toybur Stylish Name Generator 🔥
+    </div>
+
+    <h2>💙 Powered by Toybur Studio</h2>
+
+    <input type="text" id="userName" placeholder="তোমার নাম লিখো..." onkeyup="generate()">
+
+    <div id="result"></div>
+
+    <div class="footer">
+        © 2026 • Created with ❤️ by Toybur
+    </div>
+
+    <script>
+        function generate() {
+            let name = document.getElementById("userName").value;
+            let result = document.getElementById("result");
+
+            if(name.trim() === "") {
+                result.innerHTML = "";
+                return;
+            }
+
+            result.innerHTML = `
+                <div class="box">★ ${name} ★</div>
+                <div class="box">✦✦ ${name} ✦✦</div>
+                <div class="box">𓆩 ${name} 𓆪</div>
+                <div class="box">♡ ${name} ♡</div>
+                <div class="box">⚡ ${name} ⚡</div>
+                <div class="box">✪ ${name} ✪</div>
+                <div class="box">『 ${name} 』</div>
+                <div class="box">★彡 ${name} 彡★</div>
+                <div class="box">✍︎ ${name}</div>
+                <div class="box">♛ ${name} ♛</div>
+                <div class="box">꧁༺ ${name} ༻꧂</div>
+                <div class="box">【☆】 ${name} 【☆】</div>
+                <div class="box">➤ ${name} ➤</div>
+                <div class="box">✰ ${name} ✰</div>
+                <div class="box">✿ ${name} ✿</div>
+                <div class="box">🔷 Toybur Signature Style: ${name} 🔷</div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
